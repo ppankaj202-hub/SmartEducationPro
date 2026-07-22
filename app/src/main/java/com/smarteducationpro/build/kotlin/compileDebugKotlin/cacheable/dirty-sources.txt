@@ -1,0 +1,4 @@
+C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\main\java\com\smarteducationpro\app\MainActivity.kt
+C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\main\java\com\smarteducationpro\app\ui\theme\Type.kt
+C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\main\java\com\smarteducationpro\app\ui\theme\Color.kt
+C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\main\java\com\smarteducationpro\app\ui\theme\Theme.kt

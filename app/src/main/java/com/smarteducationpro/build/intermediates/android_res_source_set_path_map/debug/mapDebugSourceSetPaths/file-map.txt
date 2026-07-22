@@ -1,0 +1,8 @@
+com.smarteducationpro.app-pngs-0 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\build\generated\res\pngs\debug
+com.smarteducationpro.app-updated_navigation_xml-1 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\build\generated\updated_navigation_xml\debug
+com.smarteducationpro.app-packageDebugResources-2 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.smarteducationpro.app-packageDebugResources-3 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.smarteducationpro.app-debug-4 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.smarteducationpro.app-debug-5 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\debug\res
+com.smarteducationpro.app-main-6 C:\Users\Ushaben Patel\AndroidStudioProjects\SmartEducationPro\app\src\main\res
+gradleHome-0 C:\Users\Ushaben Patel\.gradle
