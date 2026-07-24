@@ -12,6 +12,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import android.content.Context
+import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
+import com.smarteducationpro.app.data.UserPreferencesRepository
+
 
 @Composable
 fun LanguageScreen(
@@ -20,7 +25,10 @@ fun LanguageScreen(
 
     var selected by remember {
         mutableStateOf("English")
+
+        
     }
+
 
     Column(
         modifier = Modifier
@@ -46,6 +54,8 @@ fun LanguageScreen(
             selected == "English"
         ) {
             selected = "English"
+
+            
         }
 
         Spacer(modifier = Modifier.height(15.dp))
@@ -55,6 +65,8 @@ fun LanguageScreen(
             selected == "ગુજરાતી"
         ) {
             selected = "ગુજરાતી"
+
+            
         }
 
         Spacer(modifier = Modifier.height(15.dp))
@@ -64,6 +76,8 @@ fun LanguageScreen(
             selected == "हिन्दी"
         ) {
             selected = "हिन्दी"
+
+            
         }
 
         Spacer(modifier = Modifier.weight(1f))

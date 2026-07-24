@@ -1,18 +1,28 @@
 package com.smarteducationpro.app.feature.language
 
-import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import com.smarteducationpro.app.data.UserPreferencesRepository
+import kotlinx.coroutines.launch
 
-class LanguageViewModel : ViewModel() {
+class LanguageViewModel(
+    application: Application
+) : AndroidViewModel(application) {
 
-    private val _uiState = MutableStateFlow(LanguageUiState())
-    val uiState: StateFlow<LanguageUiState> = _uiState
+    private val repository =
+        UserPreferencesRepository(application)
 
-    fun selectLanguage(language: String) {
-        _uiState.value = _uiState.value.copy(
-            selectedLanguage = language
-        )
+    fun saveLanguage(
+        language: String
+    ) {
+
+        viewModelScope.launch {
+
+            repository.saveLanguage(language)
+
+        }
+
     }
 
 }

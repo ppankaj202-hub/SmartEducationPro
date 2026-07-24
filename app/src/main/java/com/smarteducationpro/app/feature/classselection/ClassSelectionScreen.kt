@@ -1,44 +1,30 @@
 package com.smarteducationpro.app.feature.classselection
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringArrayResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.smarteducationpro.app.common.components.PrimaryButton
+import com.smarteducationpro.app.R
 
 @Composable
 fun ClassSelectionScreen(
     onContinue: () -> Unit
 ) {
 
-    val classList = listOf(
-        "Pre School",
-        "Nursery",
-        "Junior KG",
-        "Senior KG",
-        "Std 1",
-        "Std 2",
-        "Std 3",
-        "Std 4",
-        "Std 5",
-        "Std 6",
-        "Std 7",
-        "Std 8",
-        "Std 9",
-        "Std 10",
-        "Std 11 Science",
-        "Std 11 Commerce",
-        "Std 11 Arts",
-        "Std 12 Science",
-        "Std 12 Commerce",
-        "Std 12 Arts"
-    )
+    val classList = stringArrayResource(R.array.class_list).toList()
 
     var selectedClass by remember {
         mutableStateOf("")
@@ -50,6 +36,14 @@ fun ClassSelectionScreen(
             .padding(16.dp)
     ) {
 
+        Text(
+            text = stringResource(R.string.choose_class),
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
         LazyColumn(
             modifier = Modifier.weight(1f)
         ) {
@@ -59,19 +53,31 @@ fun ClassSelectionScreen(
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 6.dp),
-
-                    colors = CardDefaults.cardColors()
-                ) {
-
-                    Button(
-                        onClick = {
+                        .padding(vertical = 6.dp)
+                        .clickable {
                             selectedClass = item
                         },
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Text(item)
-                    }
+
+                    shape = RoundedCornerShape(12.dp),
+
+                    colors = CardDefaults.cardColors(
+                        containerColor =
+                        if (selectedClass == item)
+                            Color(0xFF1565C0)
+                        else
+                            Color(0xFFF5F5F5)
+                    )
+                ) {
+
+                    Text(
+                        text = item,
+                        modifier = Modifier.padding(18.dp),
+                        color =
+                        if (selectedClass == item)
+                            Color.White
+                        else
+                            Color.Black
+                    )
 
                 }
 
@@ -79,10 +85,19 @@ fun ClassSelectionScreen(
 
         }
 
-        PrimaryButton(
-            text = "Continue",
-            onClick = onContinue
-        )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(
+            onClick = onContinue,
+            modifier = Modifier.fillMaxWidth(),
+            enabled = selectedClass.isNotEmpty()
+        ) {
+
+            Text(
+                text = stringResource(R.string.continue_text)
+            )
+
+        }
 
     }
 

@@ -24,6 +24,12 @@ fun BoardScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+
+Text(stringResource(R.string.choose_board))
+
+stringResource(R.string.gseb)
+stringResource(R.string.cbse)
+stringResource(R.string.icse)
         Text(
             text = "Select Board"
         )

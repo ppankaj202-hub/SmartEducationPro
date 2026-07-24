@@ -1,0 +1,55 @@
+<resources>
+
+    <string name="app_name">સ્માર્ટ એજ્યુકેશન પ્રો</string>
+
+    <string name="choose_language">ભાષા પસંદ કરો</string>
+
+    <string name="choose_board">બોર્ડ પસંદ કરો</string>
+
+    <string name="choose_medium">માધ્યમ પસંદ કરો</string>
+
+    <string name="choose_class">ધોરણ પસંદ કરો</string>
+
+    <string name="continue_text">આગળ વધો</string>
+
+    <string name="english">English</string>
+
+    <string name="gujarati">ગુજરાતી</string>
+
+    <string name="hindi">हिन्दी</string>
+
+    <string-array name="class_list">
+
+    <string name="gseb">ગુજરાત બોર્ડ</string>
+<string name="cbse">CBSE</string>
+<string name="icse">ICSE</string>
+
+<string name="choose_board">બોર્ડ પસંદ કરો</string>
+
+        <item>પ્રી સ્કૂલ</item>
+        <item>નર્સરી</item>
+        <item>જુનિયર KG</item>
+        <item>સીનિયર KG</item>
+
+        <item>ધોરણ 1</item>
+        <item>ધોરણ 2</item>
+        <item>ધોરણ 3</item>
+        <item>ધોરણ 4</item>
+        <item>ધોરણ 5</item>
+        <item>ધોરણ 6</item>
+        <item>ધોરણ 7</item>
+        <item>ધોરણ 8</item>
+        <item>ધોરણ 9</item>
+        <item>ધોરણ 10</item>
+
+        <item>ધોરણ 11 વિજ્ઞાન</item>
+        <item>ધોરણ 11 કોમર્સ</item>
+        <item>ધોરણ 11 આર્ટ્સ</item>
+
+        <item>ધોરણ 12 વિજ્ઞાન</item>
+        <item>ધોરણ 12 કોમર્સ</item>
+        <item>ધોરણ 12 આર્ટ્સ</item>
+
+    </string-array>
+
+</resources>

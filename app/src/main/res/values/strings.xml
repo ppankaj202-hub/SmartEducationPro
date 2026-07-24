@@ -1,3 +1,50 @@
 <resources>
-    <string name="app_name">SmartEducationPro</string>
+
+    <string name="app_name">Smart Education Pro</string>
+
+    <string name="choose_language">Choose Language</string>
+    <string name="choose_board">Choose Board</string>
+    <string name="choose_medium">Choose Medium</string>
+    <string name="choose_class">Choose Class</string>
+
+    <string name="continue_text">Continue</string>
+
+    <string name="english">English</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="hindi">Hindi</string>
+
+    <string-array name="class_list">
+
+    <string name="gseb">GSEB</string>
+<string name="cbse">CBSE</string>
+<string name="icse">ICSE</string>
+
+<string name="choose_board">Choose Board</string>
+
+        <item>Pre School</item>
+        <item>Nursery</item>
+        <item>Junior KG</item>
+        <item>Senior KG</item>
+
+        <item>Std 1</item>
+        <item>Std 2</item>
+        <item>Std 3</item>
+        <item>Std 4</item>
+        <item>Std 5</item>
+        <item>Std 6</item>
+        <item>Std 7</item>
+        <item>Std 8</item>
+        <item>Std 9</item>
+        <item>Std 10</item>
+
+        <item>Std 11 Science</item>
+        <item>Std 11 Commerce</item>
+        <item>Std 11 Arts</item>
+
+        <item>Std 12 Science</item>
+        <item>Std 12 Commerce</item>
+        <item>Std 12 Arts</item>
+
+    </string-array>
+
 </resources>
