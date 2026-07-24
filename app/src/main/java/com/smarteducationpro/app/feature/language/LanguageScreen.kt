@@ -4,19 +4,20 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import android.content.Context
-import androidx.compose.ui.platform.LocalContext
-import kotlinx.coroutines.launch
-import com.smarteducationpro.app.data.UserPreferencesRepository
-
+import com.smarteducationpro.app.R
 
 @Composable
 fun LanguageScreen(
@@ -25,10 +26,7 @@ fun LanguageScreen(
 
     var selected by remember {
         mutableStateOf("English")
-
-        
     }
-
 
     Column(
         modifier = Modifier
@@ -42,52 +40,50 @@ fun LanguageScreen(
         Spacer(modifier = Modifier.height(50.dp))
 
         Text(
-            text = "Choose Language",
-            fontSize = 28.sp,
+            text = stringResource(R.string.choose_language),
+            style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold
         )
 
         Spacer(modifier = Modifier.height(40.dp))
 
         LanguageItem(
-            "English",
-            selected == "English"
+            title = stringResource(R.string.english),
+            selected = selected == "English"
         ) {
             selected = "English"
-
-            
         }
 
         Spacer(modifier = Modifier.height(15.dp))
 
         LanguageItem(
-            "ગુજરાતી",
-            selected == "ગુજરાતી"
+            title = stringResource(R.string.gujarati),
+            selected = selected == "Gujarati"
         ) {
-            selected = "ગુજરાતી"
-
-            
+            selected = "Gujarati"
         }
 
         Spacer(modifier = Modifier.height(15.dp))
 
         LanguageItem(
-            "हिन्दी",
-            selected == "हिन्दी"
+            title = stringResource(R.string.hindi),
+            selected = selected == "Hindi"
         ) {
-            selected = "हिन्दी"
-
-            
+            selected = "Hindi"
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
         Button(
-    onClick = onContinue,
-    modifier = Modifier.fillMaxWidth()
-) {
-    Text("Continue")
-}
+            modifier = Modifier.fillMaxWidth(),
+            onClick = onContinue
+        ) {
+
+            Text(
+                text = stringResource(R.string.continue_text)
+            )
+
+        }
 
     }
 
@@ -107,21 +103,26 @@ fun LanguageItem(
                 onClick()
             },
 
+        shape = RoundedCornerShape(12.dp),
+
         colors = CardDefaults.cardColors(
+            containerColor =
             if (selected)
                 Color(0xFF1565C0)
             else
-                Color.LightGray
-        ),
-
-        shape = RoundedCornerShape(12.dp)
+                Color(0xFFE0E0E0)
+        )
 
     ) {
 
         Text(
             text = title,
             modifier = Modifier.padding(20.dp),
-            color = Color.White,
+            color =
+            if (selected)
+                Color.White
+            else
+                Color.Black,
             fontSize = 18.sp
         )
 

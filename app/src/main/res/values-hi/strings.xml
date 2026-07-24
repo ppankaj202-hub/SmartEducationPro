@@ -1,31 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">स्मार्ट एजुकेशन प्रो</string>
 
     <string name="choose_language">भाषा चुनें</string>
-
     <string name="choose_board">बोर्ड चुनें</string>
-
     <string name="choose_medium">माध्यम चुनें</string>
-
     <string name="choose_class">कक्षा चुनें</string>
 
     <string name="continue_text">आगे बढ़ें</string>
 
     <string name="english">English</string>
-
     <string name="gujarati">ગુજરાતી</string>
-
     <string name="hindi">हिन्दी</string>
 
-    <string-array name="class_list">
-
     <string name="gseb">गुजरात बोर्ड</string>
-<string name="cbse">CBSE</string>
-<string name="icse">ICSE</string>
+    <string name="cbse">CBSE</string>
+    <string name="icse">ICSE</string>
 
-<string name="choose_board">बोर्ड चुनें</string>
+    <string-array name="boards">
+        <item>गुजरात बोर्ड</item>
+        <item>CBSE</item>
+        <item>ICSE</item>
+    </string-array>
 
+    <string-array name="class_list">
         <item>प्री स्कूल</item>
         <item>नर्सरी</item>
         <item>जूनियर KG</item>
@@ -49,7 +48,6 @@
         <item>कक्षा 12 विज्ञान</item>
         <item>कक्षा 12 वाणिज्य</item>
         <item>कक्षा 12 कला</item>
-
     </string-array>
 
 </resources>

@@ -18,13 +18,19 @@
 
     <string name="hindi">हिन्दी</string>
 
-    <string-array name="class_list">
+   
 
     <string name="gseb">ગુજરાત બોર્ડ</string>
 <string name="cbse">CBSE</string>
 <string name="icse">ICSE</string>
 
-<string name="choose_board">બોર્ડ પસંદ કરો</string>
+<string-array name="boards">
+    <item>ગુજરાત બોર્ડ</item>
+    <item>CBSE</item>
+    <item>ICSE</item>
+</string-array>
+
+ <string-array name="class_list">
 
         <item>પ્રી સ્કૂલ</item>
         <item>નર્સરી</item>

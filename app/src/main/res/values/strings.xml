@@ -13,13 +13,20 @@
     <string name="gujarati">Gujarati</string>
     <string name="hindi">Hindi</string>
 
-    <string-array name="class_list">
+   
 
     <string name="gseb">GSEB</string>
 <string name="cbse">CBSE</string>
 <string name="icse">ICSE</string>
 
-<string name="choose_board">Choose Board</string>
+<string-array name="boards">
+    <item>GSEB</item>
+    <item>CBSE</item>
+    <item>ICSE</item>
+</string-array>
+
+
+ <string-array name="class_list">
 
         <item>Pre School</item>
         <item>Nursery</item>

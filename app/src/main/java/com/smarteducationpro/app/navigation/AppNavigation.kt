@@ -7,8 +7,10 @@ import androidx.navigation.compose.rememberNavController
 import com.smarteducationpro.app.feature.board.BoardScreen
 import com.smarteducationpro.app.feature.classselection.ClassSelectionScreen
 import com.smarteducationpro.app.feature.language.LanguageScreen
+import com.smarteducationpro.app.feature.login.LoginScreen
 import com.smarteducationpro.app.feature.medium.MediumScreen
 import com.smarteducationpro.app.feature.splash.SplashScreen
+import com.smarteducationpro.app.feature.home.HomeScreen
 
 @Composable
 fun AppNavigation() {
@@ -20,97 +22,74 @@ fun AppNavigation() {
         startDestination = Screen.Splash.route
     ) {
 
-        // Splash Screen
+        // Splash
         composable(Screen.Splash.route) {
-
             SplashScreen(
-
                 onNavigate = {
-
                     navController.navigate(Screen.Language.route) {
-
                         popUpTo(Screen.Splash.route) {
                             inclusive = true
                         }
-
                     }
-
                 }
-
             )
-
         }
 
-        // Language Screen
+        // Language
         composable(Screen.Language.route) {
-
             LanguageScreen(
-
                 onContinue = {
-
                     navController.navigate(Screen.Board.route)
-
                 }
-
             )
-
         }
 
-        // Board Screen
+        // Board
         composable(Screen.Board.route) {
-
             BoardScreen(
-
                 onContinue = {
-
                     navController.navigate(Screen.Medium.route)
-
                 }
-
             )
-
         }
 
-        // Medium Screen
+        // Medium
         composable(Screen.Medium.route) {
-
             MediumScreen(
-
                 onContinue = {
-
                     navController.navigate(Screen.ClassSelection.route)
-
                 }
-
             )
-
         }
 
-        // Class Selection Screen
+        // Class Selection
         composable(Screen.ClassSelection.route) {
-
             ClassSelectionScreen(
-
                 onContinue = {
-
-                    // અત્યારે Login Screen નથી,
-                    // એટલે Testing માટે Language પર પાછા મોકલી રહ્યા છીએ.
-                    // Login Screen બન્યા પછી આ Line બદલીશું.
-
-                    navController.navigate(Screen.Language.route) {
-
-                        popUpTo(Screen.Language.route) {
-                            inclusive = true
-                        }
-
-                    }
-
+                    navController.navigate(Screen.Login.route)
                 }
-
             )
-
         }
+
+        // Login
+        composable(Screen.Login.route) {
+            LoginScreen(
+                onContinue = {
+                    navController.navigate(Screen.Home.route)
+                }
+            )
+        }
+
+        composable(Screen.Home.route) {
+
+    HomeScreen()
+
+}
 
     }
+
+
+
+
 
 }
